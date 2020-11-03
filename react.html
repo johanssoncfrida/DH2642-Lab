@@ -1,0 +1,35 @@
+
+
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <link rel="stylesheet" href="style.css">
+       <meta name="viewport" content="width=device-width,initial-scale=1">
+      </head>    
+         </head> 
+<body>
+    <div id="app"></div>
+    </body>
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/react/16.8.4/umd/react.development.js"
+    ></script>
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.4/umd/react-dom.development.js"
+    ></script>
+    <script>
+    const h= React.createElement;
+    </script>
+    <script src="https://unpkg.com/babel-standalone/babel.js"></script>
+    <script src="js/model/DinnerModel.js"></script>
+
+    <script src="reactjs/sidebar.js"></script>  <!-- new file and folder -->
+    
+    <script src="js/views/sidebarView.js" type="text/jsx" data-presets="es2016, react"></script>
+    <script src="js/views/summaryView.js" type="text/jsx" data-presets="es2016, react"></script>
+    
+    <script src="js/app.js" type="text/jsx" data-presets="es2016, react"></script>
+    <script type="text/jsx" data-presets="es2016, react">
+        const model= new DinnerModel();
+        ReactDOM.render(<App model={model}/>, document.getElementById("app"));
+    </script>
+    </html>
