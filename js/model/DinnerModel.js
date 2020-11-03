@@ -15,9 +15,9 @@ class DinnerModel{
        return this.numberOfGuests; 
    }
 
-   addObserver(callback){
-       this.subscribers = this.subscribers.concat(callback);
-       
+   addObserver(obs){
+       this.subscribers = this.subscribers.concat(obs);
+       return () => this.removeObserver(obs);
    }
 
     notifyObserver(){

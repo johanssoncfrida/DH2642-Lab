@@ -1,13 +1,8 @@
 
-function Sidebar(){
-    const [guestNum,setGuestNumber]=React.useState(model.numberOfGuests);
-    React.useEffect(function(){ 
-        model.addObserver(()=>setGuestNumber(model.getNumberOfGuests())); 
- }, [model]); 
+function Sidebar({model}){
+    const guests=useModelProp(model, "numberOfGuests")
     return h(SidebarView, {
-        guests:guestNum,
+        guests,
         setGuests: n=>model.setNumberOfGuests(n)
     });
 }
-
-
