@@ -17,7 +17,8 @@ class DinnerModel{
 
    addObserver(obs){
        this.subscribers = this.subscribers.concat(obs);
-       return () => this.removeObserver(obs);
+       let remove = ()=> this.removeObserver(obs);
+       remove();
    }
 
     notifyObserver(){
@@ -30,6 +31,7 @@ class DinnerModel{
     }
     removeObserver(obs){
         this.subscribers= this.subscribers.filter(o=>obs); 
+        console.log("HEJ");
   }
   
 }
