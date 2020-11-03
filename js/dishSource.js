@@ -29,7 +29,15 @@ const  DishSource={
       .then(data=>data.results)
       // catch errors
       .catch(console.error);
-   } 
+   } ,  // comma between object methods, like between any properties! 
+   getDishDetails(id){
+      let infoText = "recipes/";
+      infoText += id;
+      infoText += "/information";
+      return this.apiCall(infoText)
+      // catch errors
+      .catch(console.error);
+   }
 }; // end of DishSource
 
 function handleHTTPError(response) {
