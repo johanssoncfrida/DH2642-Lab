@@ -31,7 +31,7 @@ class DinnerModel{
     }
     removeObserver(obs){
         this.subscribers= this.subscribers.filter(o=>obs); 
-        console.log("HEJ");
+        
   }
   
 }
