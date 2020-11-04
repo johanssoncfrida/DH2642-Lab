@@ -1,11 +1,9 @@
 function Search()
 {
-   
     const [promise, setPromise]= React.useState(null);  
     React.useEffect(()=>setPromise(DishSource.searchDishes({})), []);
     const[data,error] = usePromise(promise);
 
-    return h("div", {}     // Stub!
-          , "data: ",  JSON.stringify(data)
-          , "error: ", error);
+    return promiseNoData(promise, data, error)  // cases 0, 1, 3
+        || h(SearchResultsView, {searchResults:data});// case 2
 }
