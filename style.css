@@ -27,6 +27,10 @@
     padding:2px;
 }
 
+.detailsView{
+    word-break:break-all;
+}
+
 #searchView{
     overflow-y: auto;
 }

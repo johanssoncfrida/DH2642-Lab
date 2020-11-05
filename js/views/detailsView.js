@@ -1,11 +1,14 @@
 const DetailsView=({dish, guests})=>
-<div>  
-    <div title = "detailsView">
+<div class = "detailsView">  
+    <div>
         {JSON.stringify(dish)}
     </div>
-    <div title = "summary">
-        Dinner for <span title="nr. guests">
+    
+    <div>
+        For <span title="nr. guests">
             {guests} 
-        </span> guests 
+        </span> guests: <span>
+            {dish.pricePerServing * guests}
+        </span>
     </div>
 </div>;
