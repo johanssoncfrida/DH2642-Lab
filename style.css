@@ -31,6 +31,10 @@
     word-break:break-all;
 }
 
+#priceAndGuests{
+    vertical-align: top;
+}
+
 #searchView{
     overflow-y: auto;
 }
