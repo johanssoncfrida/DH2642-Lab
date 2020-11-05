@@ -1,7 +1,9 @@
 
-const App = ({model}) => 
+const App = ({model}) => <div>
+   <Details model = {model}/>
+    <div className = "sidebar debug"><Sidebar model ={model}/></div>
+    </div>
+/*
+<Search/>
 <div className ="flexParent">
-<div className = "sidebar debug"><Sidebar model ={model}/></div>
-<div className = "mainContent debug"><Summary model = {model}/></div> 
-</div>;
-//const App = ({model}) => <Sidebar model={model} />
+<div className = "mainContent debug"><Summary model = {model}/></div>*/
