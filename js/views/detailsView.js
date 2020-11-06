@@ -1,8 +1,8 @@
 const DetailsView=({dish, guests})=>
-<div class = "detailsView">  
-    <div id= "dishName">
+<div className = "detailsView">  
+    <h1 id= "dishName">
         {dish.title}
-    </div>
+    </h1>
 
     <div id = "imgAndPrice">
         <img src={dish.image}></img>

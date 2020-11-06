@@ -26,13 +26,18 @@
     flex:1;
     padding:2px;
 }
-
+#imgAndPrice{
+    display:flex;
+    flex-direction: row;
+    
+}
 .detailsView{
     word-break:break-all;
 }
 
 #priceAndGuests{
     vertical-align: top;
+    padding-left:20px;
 }
 
 #searchView{
