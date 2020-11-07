@@ -20,6 +20,7 @@
 }
 .sidebar{
     padding:2px;
+    width: 300px;
 }
 
 .mainContent{
@@ -52,10 +53,20 @@
     padding-bottom: 15px;
     padding-right: 4px;
     padding-left: 4px;
+    
 }
+
+
 
 img{
     height: 100px;
+   
+}
+.picsInSearchResult{
+    cursor: pointer;
+}
+#addButton{
+    cursor: pointer;
 }
 
 /* Scrollbar */

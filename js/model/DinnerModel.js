@@ -51,11 +51,12 @@ class DinnerModel{
         this.dishes.forEach(d=>{if(d.id === dish.id) 
             throw Error("Dish already added")});
         this.dishes = [dish, ...this.dishes];
+        this.notifyObserver();
     }
 
     removeFromMenu(dish){
         this.dishes =this.dishes.filter(d => d.id !== dish.id);
-        
+        this.notifyObserver();
     }
 
 }

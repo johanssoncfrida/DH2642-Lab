@@ -1,7 +1,8 @@
-const SearchResultsView=({searchResults})=>
+const SearchResultsView=({searchResults, dishChosen})=>
 <div id = "searchView"> {
     searchResults.map(dish=>
-    <span key={dish.id} class="searchResult"> <img src={"https://spoonacular.com/recipeImages/"+dish.image}></img> 
+    <span onClick = {() => {dishChosen(dish.id)}} key={dish.id} className="searchResult"> 
+            <img className= "picsInSearchResult" src={"https://spoonacular.com/recipeImages/"+dish.image}></img> 
         <div> {dish.title} </div>
     </span>)
 } </div>;
@@ -15,5 +16,4 @@ const SearchFormView=({onSearch, onType, onText})=>
     </select>
     <button onClick = {() => onSearch()}>Search!</button>
 
-</div>;
-
+</div>

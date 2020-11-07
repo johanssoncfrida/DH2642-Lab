@@ -1,9 +1,9 @@
-const DetailsView=({dish, guests})=>
+const DetailsView=({dish, guests, dishAdded, isDishInMenu})=>
 <div className = "detailsView">  
+    <button id= "addButton" onClick = {() =>  {dishAdded(dish)}} disabled = {isDishInMenu} key= {dish}>Add to menu</button>
     <h1 id= "dishName">
         {dish.title}
     </h1>
-
     <div id = "imgAndPrice">
         <img src={dish.image}></img>
         <span id = "priceAndGuests">
