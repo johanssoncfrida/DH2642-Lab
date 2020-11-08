@@ -21,7 +21,7 @@ const DetailsView=({dish, guests, dishAdded, isDishInMenu})=>
 
     <ul id = "ingredientList">
         {dish.extendedIngredients.map(ingredient =>
-            <li key={ingredient.name}>{ingredient.name}: {ingredient.measures.metric.amount} {ingredient.measures.metric.unitShort}</li>
+            <li key={dish.title + Math.random()}>{ingredient.name}: {ingredient.measures.metric.amount} {ingredient.measures.metric.unitShort}</li>
         )}
     </ul>
 

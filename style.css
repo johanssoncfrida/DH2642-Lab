@@ -1,13 +1,16 @@
 .debug{
     border-style: solid;
-    font-style: italic;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.flexParent{
+    display: flex;
+    flex-direction: row;
 }
 @media(min-width:300px){
 .flexParent{
     display: flex; 
     flex-direction: row;
-    height:100%; 
+    
 }
 
 }
@@ -15,12 +18,13 @@
 .flexParent{
     display:flex;
     flex-direction:column;
-    height:100%;
+    
 }
 }
 .sidebar{
     padding:2px;
-    width: 300px;
+    width: 350px;
+    
 }
 
 .mainContent{
@@ -44,6 +48,9 @@
 #searchView{
     overflow-y: auto;
 }
+#SearchfieldInSearchView{
+    padding:10px 10px 10px 10px;
+}
 
 .searchResult{
     display: inline-block;
@@ -55,7 +62,6 @@
     padding-left: 4px;
     
 }
-
 
 
 img{
