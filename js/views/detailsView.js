@@ -13,7 +13,7 @@ const DetailsView=({dish, guests, dishAdded, isDishInMenu})=>
             For <span title="nr. guests">
                 {guests} 
             </span> guests: <span>
-                {dish.pricePerServing * guests}
+                {(dish.pricePerServing * guests).toFixed(2)}
             </span>
             </div>
         </span>

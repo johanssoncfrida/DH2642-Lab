@@ -58,6 +58,38 @@ class DinnerModel{
         this.dishes =this.dishes.filter(d => d.id !== dish.id);
         this.notifyObserver();
     }
+    getIngredientList()
+    {
+        if (this.dishes == [])
+            return [];
+        let temp = (this.dishes.map(dish => dish.extendedIngredients)).flat();
+        temp = temp.map(ingredient => ingredient = {id:ingredient.id, ingredientName:ingredient.name
+            , amount:{amount:ingredient.measures.metric.amount, unitLong:ingredient.measures.metric.unitLong, unitShort:ingredient.measures.metric.unitShort}
+            , aisle:ingredient.aisle});
+        let result = [];
+
+        temp.forEach(ingredient => {
+            ingredient.amount.amount = (ingredient.amount.amount * this.numberOfGuests).toFixed(2);
+            let index = 0;
+            let wasFound = 0;
+            while (index < result.length && !wasFound) {
+                if (ingredient.id == result[index].id)
+                {
+                    result[index].amount.amount += ingredient.amount.amount;
+                    wasFound = 1;
+                    return;
+                }
+                index++;
+            }
+            if(!wasFound)
+            {
+                result = result.concat(ingredient);
+            }
+        })
+
+        return result;
+    }
+   
 
 }
     

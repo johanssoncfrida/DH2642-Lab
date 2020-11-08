@@ -1,55 +1,90 @@
-.debug{
-    border-style: solid;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+
+/*
+* in app.js
+*/
 .flexParent{
     display: flex;
     flex-direction: row;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-style: solid;
+
 }
-@media(min-width:300px){
+
+@media(min-width:400px){
 .flexParent{
     display: flex; 
-    flex-direction: row;
-    
+    margin: 10px 10px 10pc 10px;
 }
-
 }
-@media(max-width:299px){
+@media(max-width:399px){
 .flexParent{
     display:flex;
-    flex-direction:column;
+    flex-direction:column;      
+}
+}
+.Search{
+    border-style: solid;
     
 }
-}
-.sidebar{
-    padding:2px;
-    width: 350px;
-    
-}
-
 .mainContent{
     flex:1;
     padding:2px;
+    background-color: hsl(17, 63%, 83%);
+    border-style: solid;
+}
+.SidebarAndSummary{
+    background-color: hsl(17, 67%, 90%);
+    flex-direction: column;
+    padding:2px;
+    width: 350px;
+}
+
+/*
+*DetailsView.js
+*/
+
+.detailsView{
+    word-break:break-all;
+    
 }
 #imgAndPrice{
     display:flex;
     flex-direction: row;
     
 }
-.detailsView{
-    word-break:break-all;
-}
 
 #priceAndGuests{
     vertical-align: top;
     padding-left:20px;
 }
-
-#searchView{
+#addButton{
+    cursor: pointer;
+    font-size: 15px;
+    padding:10px 10px 10px 10px;
+    float:right;
+    margin-right: 50px;
+    background-color: #D3212D;
+    color: white;
+}
+#addButton:disabled{
+    
+    font-size: 15px;
+    padding:10px 10px 10px 10px;
+    float:right;
+    margin-right: 50px;
+    background-color: gray;
+    color: white;
+}
+/*
+*SearchView.js
+*/
+.searchView{
     overflow-y: auto;
+    
 }
 #SearchfieldInSearchView{
-    padding:10px 10px 10px 10px;
+    padding:20px 20px 20px 20px;
+    
 }
 
 .searchResult{
@@ -59,39 +94,61 @@
     vertical-align: top;
     padding-bottom: 15px;
     padding-right: 4px;
-    padding-left: 4px;
-    
-}
-
-
-img{
-    height: 100px;
-   
+    padding-left: 4px; 
 }
 .picsInSearchResult{
     cursor: pointer;
 }
-#addButton{
-    cursor: pointer;
+
+img{
+    height: 100px;
 }
 
 /* Scrollbar */
 /* width */
-#searchView::-webkit-scrollbar {
+.searchView::-webkit-scrollbar {
     width: 10px;
 }
+
+/*
+* in SidebarView.js
+*/
+.table{
+    width:300px;
+    text-align: left;
   
-/* Track */
-#searchView::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    padding:10px 10px 10px 0px;
 }
-  
-/* Handle */
-#searchView::-webkit-scrollbar-thumb {
-    background: rgb(207, 19, 19);
+.headerGuests{
+    font-size: 25px;
 }
-  
-/* Handle on hover */
-#searchView::-webkit-scrollbar-thumb:hover {
-    background: #555;
+.headerDishes{
+    font-size: 25px;
+}
+.buttonsAndGuests{
+    margin-left: 10px;
+}
+.buttonSidebar:disabled{
+    background-color: gray;
+    color: white;
+}
+
+.buttonSidebar{
+    cursor: pointer;
+    background-color: #D3212D;
+    color: white;
+}
+/*
+*SummaryView
+*/
+.menuInSummary{
+    padding-left: 10px;
+    word-wrap: break-word;
+    width: 250px;
+}
+.shoppingListHeader{
+    font-size: 20px;
+}
+#ingredientAisleQuantity{
+    font-weight: bold;
 }
