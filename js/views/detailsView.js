@@ -1,9 +1,9 @@
-const DetailsView=({dish, guests})=>
-<div class = "detailsView">  
-    <div id= "dishName">
+const DetailsView=({dish, guests, dishAdded, isDishInMenu})=>
+<div className = "detailsView">  
+    <button id= "addButton" onClick = {() =>  {dishAdded(dish)}} disabled = {isDishInMenu} key= {dish}>Add to menu</button>
+    <h1 id= "dishName">
         {dish.title}
-    </div>
-
+    </h1>
     <div id = "imgAndPrice">
         <img src={dish.image}></img>
         <span id = "priceAndGuests">
@@ -21,7 +21,7 @@ const DetailsView=({dish, guests})=>
 
     <ul id = "ingredientList">
         {dish.extendedIngredients.map(ingredient =>
-            <li key={ingredient.name}>{ingredient.name}: {ingredient.measures.metric.amount} {ingredient.measures.metric.unitShort}</li>
+            <li key={dish.title + Math.random()}>{ingredient.name}: {ingredient.measures.metric.amount} {ingredient.measures.metric.unitShort}</li>
         )}
     </ul>
 

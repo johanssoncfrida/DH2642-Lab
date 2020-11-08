@@ -1,13 +1,16 @@
 .debug{
     border-style: solid;
-    font-style: italic;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.flexParent{
+    display: flex;
+    flex-direction: row;
 }
 @media(min-width:300px){
 .flexParent{
     display: flex; 
     flex-direction: row;
-    height:100%; 
+    
 }
 
 }
@@ -15,28 +18,38 @@
 .flexParent{
     display:flex;
     flex-direction:column;
-    height:100%;
+    
 }
 }
 .sidebar{
     padding:2px;
+    width: 350px;
+    
 }
 
 .mainContent{
     flex:1;
     padding:2px;
 }
-
+#imgAndPrice{
+    display:flex;
+    flex-direction: row;
+    
+}
 .detailsView{
     word-break:break-all;
 }
 
 #priceAndGuests{
     vertical-align: top;
+    padding-left:20px;
 }
 
 #searchView{
     overflow-y: auto;
+}
+#SearchfieldInSearchView{
+    padding:10px 10px 10px 10px;
 }
 
 .searchResult{
@@ -47,10 +60,19 @@
     padding-bottom: 15px;
     padding-right: 4px;
     padding-left: 4px;
+    
 }
+
 
 img{
     height: 100px;
+   
+}
+.picsInSearchResult{
+    cursor: pointer;
+}
+#addButton{
+    cursor: pointer;
 }
 
 /* Scrollbar */
