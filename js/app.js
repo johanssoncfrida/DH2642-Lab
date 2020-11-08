@@ -3,11 +3,13 @@ const App = ({model}) =>
 <div>
     
     <div className = "flexParent">
-        <div className = "sidebar debug"><Sidebar model ={model}/></div>
-        <div className = "mainContent debug">
-            <div className = "debug" ><Search model={model} /></div>
-            <div className = "debug" ><Details model = {model}/></div>
-            <div className = "debug"><Summary model = {model}/></div>
+        <div className = "SidebarAndSummary">
+        <div className = "Sidebar mainWindow"><Sidebar model ={model}/></div>
+        <div className = "Summary "><Summary model = {model}/></div></div>
+        <div className = "mainContent">
+            <div className = "Search mainWindow" ><Search model={model}/></div>
+            <div className = "Details mainWindow"><Details model = {model}/></div>
+            
         </div>
 
     </div>
