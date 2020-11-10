@@ -1,7 +1,7 @@
-const DetailsView=({dish, guests, dishAdded, isDishInMenu, cancel:[navCallback,navLabel]})=>
+const DetailsView=({dish, guests, dishAdded, addLabel,isDishInMenu, cancel:[navCallback,navLabel]})=>
 <div className = "detailsView">  
     <button onClick = {() => navCallback()}>{navLabel}</button>
-    <button id= "addButton" onClick = {() =>  {dishAdded(dish)}} disabled = {isDishInMenu} key= {dish}>Add to menu</button>
+    <button id= "addButton" onClick = {() =>  {dishAdded(dish)}} disabled = {isDishInMenu} key= {dish}>{addLabel}</button>
     <h1 id= "dishName">
         {dish.title}
     </h1>
