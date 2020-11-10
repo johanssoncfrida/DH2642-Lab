@@ -1,4 +1,4 @@
-const SidebarView=({guests, setGuests, dishes, removeDish, dishType, compareDishes})=>
+const SidebarView=({guests, setGuests, dishes, removeDish, dishType, compareDishes, dishChosen})=>
 <div> 
     <h1 className = "headerGuests"> Number of guests</h1>
     <div className = "buttonsAndGuests"><button className = "buttonSidebar" onClick = {() => setGuests(guests - 1)}
@@ -11,7 +11,7 @@ const SidebarView=({guests, setGuests, dishes, removeDish, dishType, compareDish
         dishes.sort(compareDishes).map(dish =>
             <tbody key = {dish.id + Math.random()}>
                 <tr>
-                    <td>{dish.title}</td>
+                    <td><a id = "sideBarClickabeName" onClick = {event=> dishChosen(dish.id)}>{dish.title}</a></td>
                     <td>{dishType(dish)}</td>
                     <td>{dish.pricePerServing}</td>
                     <td><button onClick = {e => removeDish(dish)} >x</button></td>

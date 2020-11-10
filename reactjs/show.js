@@ -4,5 +4,6 @@ function Show({hash, children}){
       window.addEventListener("hashchange", 
                  ()=> setRoute({})), 
  []); 
+    ()=>window.removeEventListener("hashChange", route);
     return hash===window.location.hash?children: false;
  } 

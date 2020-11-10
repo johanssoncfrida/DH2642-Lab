@@ -1,5 +1,5 @@
 
-function Sidebar({model}){
+function Sidebar({model, dishChoice}){
     const guests = useModelProp(model, "numberOfGuests")
     const dishes = useModelProp(model, "dishes")
     return h(SidebarView, {
@@ -8,7 +8,11 @@ function Sidebar({model}){
         dishes,
         removeDish: dish=> {model.removeFromMenu(dish)},
         dishType: dishType,
-        compareDishes: compareDishes
+        compareDishes: compareDishes,
+        dishChosen: dishId=> {
+            model.setCurrentDish(dishId);
+            dishChoice();
+        }
     });
     
 }
