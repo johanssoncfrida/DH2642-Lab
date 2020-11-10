@@ -7,8 +7,9 @@ const SearchResultsView=({searchResults, dishChosen})=>
     </span>)
 } </div>;
 
-const SearchFormView=({onSearch, onType, onText})=> 
+const SearchFormView=({onSearch, onType, onText, nav:[navCallback,navLabel]})=> 
 <div id = "SearchfieldInSearchView">
+    <button onClick = {() => navCallback()}>{navLabel}</button>
     <input type="text" placeholder= "Enter type of dish here" onChange = {event => onText(event.target.value)}></input>
     <select defaultValue = "" onChange = {event=> onType(event.target.value)}>
         <option hidden value="" disabled>choose:</option>

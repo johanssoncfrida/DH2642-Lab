@@ -1,5 +1,7 @@
-const SummaryView = ({guests, dishes, ingredients, compareIngredients}) =>
+const SummaryView = ({guests, dishes, ingredients, compareIngredients,nav:[navCallback,navLabel]}) =>
+
 <div className = "menuInSummary">
+     <button onClick = {() => navCallback()}>{navLabel}</button>
      <div >
           <h1>
                Menu

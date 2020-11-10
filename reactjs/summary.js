@@ -1,11 +1,14 @@
 
-function Summary({model}){
+function Summary({model, nav}){
     const guests = useModelProp(model, "numberOfGuests")
     const dishes = useModelProp(model, "dishes")
     return h(SummaryView, {
         guests, 
         dishes,
-        ingredients:(model.getIngredientList()), compareIngredients});
+        ingredients:(model.getIngredientList()), 
+        compareIngredients,
+        nav: nav},
+         );
 }
 
 function compareIngredients(a,b){

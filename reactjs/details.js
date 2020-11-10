@@ -1,4 +1,4 @@
-function Details({model}){ 
+function Details({model,cancel}){ 
     const [promise, setPromise]= React.useState(null);
     const guests = useModelProp(model, "numberOfGuests");
     const currentDish = useModelProp(model, "currentDish");
@@ -15,6 +15,7 @@ function Details({model}){
             dish:data, 
             guests:guests, 
             dishAdded: currentDish => {model.addToMenu(currentDish)},
-            isDishInMenu: menu.find(d => d.id == data.id)
+            isDishInMenu: menu.find(d => d.id == data.id),
+            cancel: cancel
         });   
 }

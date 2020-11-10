@@ -31,7 +31,7 @@
     border-style: solid;
     border-color: hsl(87, 48%, 68%);
 }
-.SidebarAndSummary{
+.Sidebar{
     background-color: hsl(87, 48%, 72%);
     flex-direction: column;
     padding:2px;
@@ -40,18 +40,13 @@
     border-width: 10px;
     width: 350px;
 }
-.Search{
+.mainWindow{
     border-color: hsl(87, 48%, 70%);
     border-style: groove;
     border-width: 10px;
     background-color: hsl(87, 48%, 72%);
 }
-.Details{
-    border-color: hsl(87, 48%, 70%);
-    border-style: groove;
-    border-width: 10px;
-    background-color: hsl(87, 48%, 72%);
-}
+
 /*
 *DetailsView.js
 */
