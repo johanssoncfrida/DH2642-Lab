@@ -5,7 +5,7 @@ const DetailsView=({dish, guests, dishAdded, isDishInMenu})=>
         {dish.title}
     </h1>
     <div id = "imgAndPrice">
-        <img src={dish.image}></img>
+        <img id ="pictureInDetailsView" src={dish.image}></img>
         <span id = "priceAndGuests">
             <div>
             Price: {dish.pricePerServing}
@@ -28,7 +28,7 @@ const DetailsView=({dish, guests, dishAdded, isDishInMenu})=>
     <div id = "recipeInstruction">
             {dish.instructions}
     </div>
-
+    <br/>
     <div id = "dishMoreInformation">
             <a href={dish.sourceUrl}>More information</a>
     </div>

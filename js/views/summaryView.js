@@ -19,7 +19,7 @@ const SummaryView = ({guests, dishes, ingredients, compareIngredients}) =>
          
      </div>
 </div>
-<div class="shoppingList" title = "Shopping list">
+<div className ="shoppingList" title = "Shopping list">
      <h1 className= "shoppingListHeader">Shopping list</h1>
           <table id="ingredientList">
                <thead>

@@ -18,11 +18,16 @@ const SidebarView=({guests, setGuests, dishes, removeDish, dishType, compareDish
                 </tr>
                 
                 </tbody>)}
-                
-                <th>Total: 
+                <tbody>
+                <tr>
+                    <td>Total: 
                     {Number.parseFloat(dishes.reduce((acc,currentValue)=>
                     acc+currentValue.pricePerServing,0)*guests).toFixed(2)} 
-                </th>
+                    </td>
+                    
+                </tr>
+                </tbody>
+                
                 
                 
     </table>
