@@ -1,4 +1,4 @@
-const summaryNav=[()=> window.location.hash="summary", "Check your menu"];
+const summaryNav=[()=> window.location.hash="summary", "Press here to check your menu"];
 const backToSearch=[()=> window.location.hash= "search", "Back to search"];
 const addToMenu =[()=> window.location.hash = "search", "Add to menu"];
 
@@ -10,7 +10,7 @@ const App = ({model,h}) =>
 
     <div class = "flexParent">
         
-        <div class = "Sidebar"><Sidebar model ={model} dishChoice={()=>
+        <div class = "Sidebar"><Sidebar model ={model} nav = {summaryNav} dishChoice={()=>
             window.location.hash= "details"}/></div>
 
         <div class = "mainContent">

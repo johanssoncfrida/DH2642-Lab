@@ -164,7 +164,8 @@ img{
 .table{
     width:300px;
     text-align: left;
-  
+    font-weight: bolder;
+    color :  #D3212D;
     padding:10px 10px 10px 0px;
 }
 .headerGuests{
@@ -189,6 +190,7 @@ img{
 #sideBarClickabeName{
     cursor: pointer;
 }
+
 /*
 *SummaryView
 */

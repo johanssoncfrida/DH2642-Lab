@@ -1,4 +1,4 @@
-const SidebarView=({guests, setGuests, dishes, removeDish, dishChosen, h})=>
+const SidebarView=({guests, setGuests, dishes, removeDish, dishChosen, navCallback,navLabel,h})=>
 <div> 
     <h1 class = "headerGuests"> Choose number of guests</h1>
     <div class = "buttonsAndGuests"><button class = "buttonSidebar" onClick = {() => setGuests(guests - 1)}
@@ -6,6 +6,7 @@ const SidebarView=({guests, setGuests, dishes, removeDish, dishChosen, h})=>
     {guests}
     <button class = "buttonSidebar" onClick = {() => setGuests(guests + 1)}>+</button> </div>
     <h1 class = "headerDishes">Your dishes</h1>
+    
     <table class = "table">
    {
         dishes.sort(compareDishes).map(dish =>
@@ -23,7 +24,7 @@ const SidebarView=({guests, setGuests, dishes, removeDish, dishChosen, h})=>
                     <td>Total: 
                     {Number.parseFloat(dishes.reduce((acc,currentValue)=>
                     acc+currentValue.pricePerServing,0)*guests).toFixed(2)} 
-                    </td>
+                     </td>
                     
                 </tr>
                 </tbody>
@@ -31,7 +32,7 @@ const SidebarView=({guests, setGuests, dishes, removeDish, dishChosen, h})=>
                 
                 
     </table>
-    
+    <button  id = "summaryButton" onClick = {() => navCallback()}>{navLabel}</button>
     </div>;
 const types=["starter", "main course", "dessert"];
 function dishType(dish){

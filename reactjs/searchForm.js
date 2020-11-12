@@ -5,7 +5,7 @@ const SearchFormReact=({onSearch, nav:[navCallback,navLabel]})=>{
 
     return <div>
         <div id = "SearchfieldInSearchView">
-            <button  id = "summaryButton" onClick = {() => navCallback()}>{navLabel}</button>
+            {/* <button  id = "summaryButton" onClick = {() => navCallback()}>{navLabel}</button> */}
         <input type="text" placeholder= "Enter type of dish here"  onChange = {event=>setText(event.target.value)} />
         <select defaultValue = "" onChange = {event=> setType(event.target.value)}>
             <option hidden value="" disabled>choose:</option>

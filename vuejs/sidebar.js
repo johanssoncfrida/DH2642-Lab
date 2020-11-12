@@ -1,7 +1,8 @@
 const Sidebar= {
-    props: ["model", "dishChoice"],
+    props: ["model", "nav" ,"dishChoice"],
     render(h){    
-        const  {model, dishChoice} = this;     
+        const  {model, nav, dishChoice} = this;   
+        const[navCallback,navLabel] = nav;
         return SidebarView({
             h,
             guests: model.getNumberOfGuests(),
@@ -11,7 +12,9 @@ const Sidebar= {
             dishChosen: dishId=> {
             model.setCurrentDish(dishId);
             dishChoice();
-        }
+            },
+            navCallback:navCallback,
+            navLabel:navLabel
           });
      }
 }
