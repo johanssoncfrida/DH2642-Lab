@@ -1,11 +1,16 @@
-const DetailsView=({dish, guests, dishAdded, isDishInMenu})=>
-<div className = "detailsView">  
-    <button id= "addButton" onClick = {() =>  {dishAdded(dish)}} disabled = {isDishInMenu} key= {dish}>Add to menu</button>
+const DetailsView=({dish, guests, dishAdded, addLabel,isDishInMenu, cancel:[navCallback,navLabel],h})=>
+<div class = "detailsView">  
+
+    <button id = "backToSearchDetail"onClick = {() => navCallback()}>{navLabel}</button>
+    
+    <button id= "addButton" onClick = {() =>  {dishAdded(dish)}} disabled = {isDishInMenu} key= {dish}>{addLabel}</button>
+
     <h1 id= "dishName">
         {dish.title}
     </h1>
+    
     <div id = "imgAndPrice">
-        <img src={dish.image}></img>
+        <img id ="pictureInDetailsView" src={dish.image}></img>
         <span id = "priceAndGuests">
             <div>
             Price: {dish.pricePerServing}
@@ -28,7 +33,7 @@ const DetailsView=({dish, guests, dishAdded, isDishInMenu})=>
     <div id = "recipeInstruction">
             {dish.instructions}
     </div>
-
+    <br/>
     <div id = "dishMoreInformation">
             <a href={dish.sourceUrl}>More information</a>
     </div>

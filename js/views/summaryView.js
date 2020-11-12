@@ -1,5 +1,7 @@
-const SummaryView = ({guests, dishes, ingredients, compareIngredients}) =>
-<div className = "menuInSummary">
+const SummaryView = ({h,guests, dishes, ingredients,nav:[navCallback,navLabel]}) =>
+
+<div class = "menuInSummary">
+          <button id = "BackToSearchButton" onClick = {() => navCallback()}>{navLabel}</button>
      <div >
           <h1>
                Menu
@@ -19,8 +21,8 @@ const SummaryView = ({guests, dishes, ingredients, compareIngredients}) =>
          
      </div>
 </div>
-<div class="shoppingList" title = "Shopping list">
-     <h1 className= "shoppingListHeader">Shopping list</h1>
+<div class ="shoppingList" title = "Shopping list">
+     <h1 class= "shoppingListHeader">Shopping list</h1>
           <table id="ingredientList">
                <thead>
                     <tr id = "ingredientAisleQuantity"><td>ingredient</td><td>Aisle</td><td>Quantity</td></tr>
@@ -37,3 +39,19 @@ const SummaryView = ({guests, dishes, ingredients, compareIngredients}) =>
      </div>
      
 </div>;
+
+function compareIngredients(a,b){
+    
+     if(a.aisle < b.aisle)
+         return -1;
+     else if(a.aisle > b.aisle)
+         return 1;
+     
+     else if(a.name < b.name)
+         return -1;
+     else if(a.name >b.name)
+         return 1;
+     else 
+         return 0;
+     
+ }

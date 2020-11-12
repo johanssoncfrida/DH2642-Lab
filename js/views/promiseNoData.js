@@ -1,4 +1,4 @@
-function promiseNoData(promise, data, error)
+function promiseNoData(promise, data, error, h)
 {  
     return  !promise && "no dish is chosen"     // case "0"  
           || error && <h1>{error.message}</h1>   // case 3 
