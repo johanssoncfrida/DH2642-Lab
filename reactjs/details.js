@@ -1,4 +1,4 @@
-function Details({model,ok:[addNav,addLabel],cancel}){ 
+function Details({model, ok:[addNav,addLabel],cancel}){ 
     const [promise, setPromise]= React.useState(null);
     const guests = useModelProp(model, "numberOfGuests");
     const currentDish = useModelProp(model, "currentDish");

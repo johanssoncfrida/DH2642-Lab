@@ -1,13 +1,13 @@
-const SearchResultsView=({searchResults, dishChosen})=>
-<div className = "searchView"> {
+const SearchResultsView=({searchResults, dishChosen,h})=>
+<div class = "searchView"> {
     searchResults.map(dish=>
-    <span onClick = {() => {dishChosen(dish.id)}} key={dish.id} className="searchResult"> 
-            <img className= "picsInSearchResult" src={"https://spoonacular.com/recipeImages/"+dish.image}></img> 
+    <span onClick = {() => {dishChosen(dish.id)}} key={dish.id} class="searchResult"> 
+            <img class= "picsInSearchResult" src={"https://spoonacular.com/recipeImages/"+dish.image}></img> 
         <div> {dish.title} </div>
     </span>)
 } </div>;
 
-const SearchFormView=({onSearch, onType, onText, nav:[navCallback,navLabel]})=> 
+const SearchFormView=({onSearch, onType, onText, nav:[navCallback,navLabel],h})=> 
 <div id = "SearchfieldInSearchView">
     <button onClick = {() => navCallback()}>{navLabel}</button>
     <input type="text" placeholder= "Enter type of dish here" onChange = {event => onText(event.target.value)}></input>

@@ -31,8 +31,7 @@ class DinnerModel{
 
    addObserver(obs){
        this.subscribers = this.subscribers.concat(obs);
-       let remove = () => this.removeObserver(obs);
-       remove();
+       
    }
 
     notifyObserver(){
@@ -44,7 +43,7 @@ class DinnerModel{
         })
     }
     removeObserver(obs){
-        this.subscribers= this.subscribers.filter(o=>obs); 
+        this.subscribers= this.subscribers.filter(o=> o != obs); 
         
     }
     addToMenu(dish){
