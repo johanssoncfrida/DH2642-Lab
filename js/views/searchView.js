@@ -7,7 +7,7 @@ const SearchResultsView=({searchResults, dishChosen,h})=>
     </span>)
 } </div>;
 
-/*THIS IS MOVED TO SEARCHFORM
+/*THIS IS STILL HERE SO VUE WORKS */
 
 const SearchFormView=({onSearch, onType, onText, nav:[navCallback,navLabel],h})=> 
 <div id = "SearchfieldInSearchView">
@@ -23,4 +23,3 @@ const SearchFormView=({onSearch, onType, onText, nav:[navCallback,navLabel],h})=
     <button id = "searchButton" onClick = {() => onSearch()}>Search!</button>
 
 </div>
-*/
