@@ -1,6 +1,6 @@
 const SidebarView=({guests, setGuests, dishes, removeDish, dishChosen, h})=>
 <div> 
-    <h1 class = "headerGuests"> Number of guests</h1>
+    <h1 class = "headerGuests"> Choose number of guests</h1>
     <div class = "buttonsAndGuests"><button class = "buttonSidebar" onClick = {() => setGuests(guests - 1)}
     disabled = {guests===1}>-</button> 
     {guests}

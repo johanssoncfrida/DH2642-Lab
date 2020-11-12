@@ -20,12 +20,10 @@ const Search={
                     h,
                     onText: x=> this.text = x,
                     onType: x=> this.type = x,
-                    onSearch: ()=>{
-                    this.promise = DishSource.searchDishes({type:this.type, query:this.text}).then(dt => this.data = dt).
+                    onSearch: ()=> {this.promise = DishSource.searchDishes({type:this.type, query:this.text}).then(dt => this.data = dt).
                     catch(this.error);
                     this.data = null;
                     this.error = null;},
-                    
                     nav: this.nav
                 })
                ,
