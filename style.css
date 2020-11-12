@@ -35,15 +35,15 @@
     background-color: hsl(87, 48%, 72%);
     flex-direction: column;
     padding:2px;
-    border-color: hsl(87, 48%, 70%);
-    border-style: groove;
+    border-color: hsl(87, 48%, 60%);
+    border-style: double;
     border-width: 10px;
     width: 350px;
 }
 
 .mainWindow{
-    border-color: hsl(87, 48%, 70%);
-    border-style: groove;
+    border-color: hsl(87, 48%, 60%);
+    border-style: double;
     border-width: 10px;
     background-color: hsl(87, 48%, 72%);
 }
@@ -68,6 +68,8 @@
     vertical-align: top;
     padding-left:20px;
 }
+
+
 #addButton{
     cursor: pointer;
     font-size: 15px;
@@ -86,9 +88,20 @@
     background-color: gray;
     color: white;
 }
+
+#backToSearchDetail{
+    cursor: pointer;
+    font-size: 15px;
+    padding:10px 10px 10px 10px;
+    margin: 25px 40px 0px 50px;
+    float:right;
+    background-color: #2b5e2d;
+    color: white;
+}
 #recipeInstruction{
     padding:5px 30px 5px 23px;
 }
+
 /*
 *SearchView.js
 */
@@ -123,7 +136,20 @@ img{
     border-radius: 4px;
     border: 1px solid black;
     padding: 2px;
-    
+}
+
+#summaryButton{
+    cursor: pointer;
+    background-color: #2b5e2d;
+    color: white;
+    padding:10px 10px 10px 10px;
+    margin: 25px 40px;
+    float:right;
+}
+#searchButton{
+    cursor: pointer;
+    background-color: #D3212D;
+    color: white;
 }
 
 /* Scrollbar */
@@ -176,4 +202,13 @@ img{
 }
 #ingredientAisleQuantity{
     font-weight: bold;
+}
+
+#BackToSearchButton{
+    cursor: pointer;
+    background-color: #2b5e2d;
+    color: white;
+    padding:10px 10px 10px 10px;
+    float: right;
+    
 }

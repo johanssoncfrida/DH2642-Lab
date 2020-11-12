@@ -1,7 +1,7 @@
 const SummaryView = ({h,guests, dishes, ingredients,nav:[navCallback,navLabel]}) =>
 
 <div class = "menuInSummary">
-     <button onClick = {() => navCallback()}>{navLabel}</button>
+          <button id = "BackToSearchButton" onClick = {() => navCallback()}>{navLabel}</button>
      <div >
           <h1>
                Menu
