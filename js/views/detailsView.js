@@ -3,7 +3,7 @@ const DetailsView=({dish, guests, dishAdded, addLabel,isDishInMenu, cancel:[navC
 
     <button id = "backToSearchDetail"onClick = {() => navCallback()}>{navLabel}</button>
     
-    <button id= "addButton" onClick = {() =>  {dishAdded(dish)}} disabled = {isDishInMenu} key= {dish}>{addLabel}</button>
+    <button id= "addButton" onClick = {() =>  {dishAdded(dish)}} disabled = {isDishInMenu} key= {dish.id}>{addLabel}</button>
 
     <h1 id= "dishName">
         {dish.title}
