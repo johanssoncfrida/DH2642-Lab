@@ -33,7 +33,8 @@ const SidebarView=({guests, setGuests, dishes, removeDish, dishChosen, navCallba
                 
     </table>
     <button  id = "summaryButton" onClick = {() => navCallback()}>{navLabel}</button>
-    </div>;
+</div>;
+
 const types=["starter", "main course", "dessert"];
 function dishType(dish){
     const tp= dish.dishTypes.filter(value => types.includes(value));

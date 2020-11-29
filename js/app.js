@@ -15,11 +15,11 @@ const App = ({model,h}) =>
 
         <div class = "mainContent">
         <Show hash="#search">
-            <div className = "mainWindow" ><Search model={model} nav = {summaryNav} resultChoice={()=>
+            <div class = "mainWindow" ><Search model={model} nav = {summaryNav} resultChoice={()=>
             window.location.hash= "details"}/></div>
         </Show>
         <Show hash ="#details">
-            <div className = "mainWindow"><Details model = {model} ok={addToMenu} cancel = {backToSearch}/></div> 
+            <div class = "mainWindow"><Details model = {model} ok={addToMenu} cancel = {backToSearch}/></div> 
         </Show>
         <Show hash = "#summary">
             <div class = "mainWindow"><Summary model = {model} nav={backToSearch}/></div>

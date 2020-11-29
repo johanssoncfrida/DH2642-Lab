@@ -7,22 +7,22 @@ const SummaryView = ({h,guests, dishes, ingredients,nav:[navCallback,navLabel]})
                Menu
           </h1>
      </div>
-<div title = "summary">
-     Dinner for <span title="nr. guests">
-          {guests}
+     <div title = "summary">
+          Dinner for <span title="nr. guests">
+               {guests}
+               
+          </span> guests 
+          <div>{
+          dishes.map(dish =>
+               <div key = {dish.id}>
+                    <li>{dish.title}</li>
+                    
+                    </div>)}
           
-     </span> guests 
-     <div>{
-        dishes.map(dish =>
-            <div key = {dish.id}>
-                <li>{dish.title}</li>
-                
-                </div>)}
-         
+          </div>
      </div>
-</div>
-<div class ="shoppingList" title = "Shopping list">
-     <h1 class= "shoppingListHeader">Shopping list</h1>
+     <div class ="shoppingList" title = "Shopping list">
+          <h1 class= "shoppingListHeader">Shopping list</h1>
           <table id="ingredientList">
                <thead>
                     <tr id = "ingredientAisleQuantity"><td>ingredient</td><td>Aisle</td><td>Quantity</td></tr>
