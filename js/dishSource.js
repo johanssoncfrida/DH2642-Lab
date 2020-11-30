@@ -27,8 +27,7 @@ const  DishSource={
       return this.apiCall(searchText) 
       // leave out the unimportant parts of the response data
       .then(data=>data.results)
-      // catch errors
-      .catch(console.error);
+      
    } ,  // comma between object methods, like between any properties! 
    getDishDetails(id){
       let infoText = "recipes/";
